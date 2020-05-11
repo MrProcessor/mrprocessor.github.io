@@ -1,0 +1,94 @@
+body { 
+    background-color: rgb(200,200,200);
+}
+
+h1 {
+    text-align: center;
+    margin: 1.5em 0;
+    font-size: 2.5em;
+}
+
+p {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#menu {
+    background-color: black;
+    display: grid; 
+    grid-template-columns: auto auto auto auto;
+    position: sticky;
+    top: 0px;
+}
+
+#menu a {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    color: white;
+    padding: 2vh 0;
+    text-decoration: none;
+    border-right: 1px solid rgb(200,200,200);
+}
+
+#menu a:last-of-type {
+    border-right: none;
+}
+
+#menu a:hover {
+    background-color: burlywood;
+}
+
+#home {
+    grid-column: 1;
+}
+
+#skills {
+    grid-column: 2;
+}
+
+#contact {
+    grid-column: 3;
+}
+
+#github {
+    grid-column: 4;
+}
+
+@media only screen and (max-width: 800px) {
+    #home {
+        grid-area: 1 / 1 / span 1 / span 4
+    }
+
+    #skills {
+        grid-area: 2 / 1 / span 1 / span 4
+    }
+    
+    #contact {
+        grid-area: 3 / 1 / span 1 / span 4
+    }
+    
+    #github {
+        grid-area: 4 / 1 / span 1 / span 4
+    }
+
+    #menu {
+        position: static;
+    }
+
+    #menu a {
+        padding: 0;
+        border-right: none;
+        border-bottom: 1px solid rgb(200,200,200);
+    }
+
+    #menu a:last-of-type {
+        border-bottom: none;
+    }
+}
